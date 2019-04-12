@@ -1,0 +1,49 @@
+{#<div>#}
+    {#{{ form_start(formulaire, { 'attr': {'class': 'navbar-form navbar-left'} }) }}#}
+    {#<div class="form-group">#}
+        {#{{ form_widget(formulaire.search, { 'attr': {'class': 'form-control'} }) }}#}
+        {#{{ form_widget(formulaire.send, { 'attr': {'class': 'btn btn-default'} }) }}#}
+    {#</div>#}
+
+    {#{{ form_rest(formulaire) }}#}
+    {#{{ form_end(formulaire) }}#}
+{#</div>#}
+
+<h1> recherche </h1>
+
+<form method="post">
+    title <input type="text" name="title">
+
+    <input type="submit" name="submit" value="recherche">
+</form>
+
+<table >
+<tr>
+    <td>id</td>
+    <td>title</td>
+    <td>id</td>
+    <td>id</td>
+</tr>
+
+    {% for publication in publication %}
+    <tr>
+        <td>{{ publication.id }}</td>
+        <td>{{ publication.title }}</td>
+
+    </tr>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>

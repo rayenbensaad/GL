@@ -1,0 +1,5 @@
+AppBundle:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+    path: /recherche
+    defaults: {_controller: AppBundle:Api\Publication:search}

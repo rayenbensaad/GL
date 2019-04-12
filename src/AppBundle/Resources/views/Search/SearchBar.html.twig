@@ -1,0 +1,20 @@
+{#{{ form_start(form,{#}
+    {#'attr':{'class':'navbar-form navbar-right', 'action':path('handleSearch')}#}
+{#}) }}#}
+
+    {#{{ form_widget(form.search,{#}
+        {#'attr':{'class':'form-control search-query'}#}
+    {#}) }}#}
+
+{#{{ form_end(form) }}#}
+
+<div>
+    {{ form_start(formulaire, { 'attr': {'class': 'navbar-form navbar-left'} }) }}
+    <div class="form-group">
+        {{ form_widget(formulaire.search, { 'attr': {'class': 'form-control'} }) }}
+        {{ form_widget(formulaire.send, { 'attr': {'class': 'btn btn-default'} }) }}
+    </div>
+
+    {{ form_rest(formulaire) }}
+    {{ form_end(formulaire) }}
+</div>
